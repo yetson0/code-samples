@@ -1,8 +1,8 @@
 function cal_to_gsht_multi(){
 
-  var ss = SpreadsheetApp.openById( '15eMrb_F4QR49woUR9jma8ko1lv9dJ1-bkYL-9m4nX8E' ), // Id is set to file 'CAL-to-gsheets' in LPRMF dir
+  var ss = SpreadsheetApp.openById( '__id here__' ), // Id is set to file 'CAL-to-gsheets' in LPRMF dir
       sheet = ss.getActiveSheet(),
-      cals = ['helilpr@gmail.com', 'yetson@gmail.com'], c, cal, calName,
+      cals = ['mail1@domain', 'mail2@domain'], c, cal, calName,
       
  //??     cals = getAllCalendars(),
     
