@@ -1,20 +1,20 @@
 # persistence-and-determination
 The way to self development
 
-py:
+`py`
 - ssn / pesel generation, manipulation, validation, various approaches and algorithms, time optimization
 - python cheat sheet
 - various taks solved
 
-sql:
+`sql`
 - working with databases, queries, nested queries, converting csv into sqlite
 - task sloved
 
 and
 
-js:
+`js`
 - scripting tool for data exchange between gSuite and gCalendar
 
-html, css:
+`html` `css`
 - forms input
 
