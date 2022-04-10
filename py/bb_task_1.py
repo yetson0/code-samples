@@ -214,9 +214,8 @@ Wnioski:
 
 ---
 
-### 4. Zaimplementuj funkcję o nazwie validate_ssn, 
-która na wejściu przyjmuje numer PESEL wraz z określeniem oczekiwanej płci (żeńska/męska/dowolna) i daty urodzenia (konkretna/określona lub dowolna), a na wyjściu zwraca informację o poprawności numeru PESEL. Wewnątrz funkcji zawrzyj logikę weryfikującą poprawność syntaktyczną numeru PESEL z uwzględnieniem informacji o oczekiwanej płci oraz dacie urodzenia. Następnie przetestuj działanie funkcji validate_ssn na przykładowych danych.
-"""
+### 4. Zaimplementuj funkcję o nazwie validate_ssn, która na wejściu przyjmuje numer PESEL wraz z określeniem oczekiwanej płci (żeńska/męska/dowolna) i daty urodzenia (konkretna/określona lub dowolna), a na wyjściu zwraca informację o poprawności numeru PESEL. Wewnątrz funkcji zawrzyj logikę weryfikującą poprawność syntaktyczną numeru PESEL z uwzględnieniem informacji o oczekiwanej płci oraz dacie urodzenia. Następnie przetestuj działanie funkcji validate_ssn na przykładowych danych.
+
 
 # wikipedia PESEL:
 # Checksum calculation
