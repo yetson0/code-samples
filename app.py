@@ -27,7 +27,6 @@ with st.sidebar:
     \n /dev/ 2023 by Wlodo Sidorczuk
     ''')
 
-
 def main():
   st.header('Chat with your data')
   reader = SimpleDirectoryReader(input_dir='./data', recursive=True)
