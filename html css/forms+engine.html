@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forms tester</title>
+<!--Let browser know website is optimized for mobile-->
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--Import Google Icon Font-->
+<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+ <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- jQuery + datatables -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<script>
+
+	// on init bring back the data from localstorage
+	// function init(argument) {
+	// 	if (localStorage.flightRecords){
+	// 		flightData=JSON.parse(localStorage.flightRecords);
+	// 		for (var i=0; i<flightData.length; i++){
+	// 			var firstName = flightData[i].first_name;
+	// 			var lastName = flightData[i].last_name;
+	// 			console.log(firstName,lastName);
+	// 		}
+	// 	}
+	// }
+
+	function submitResults (form) {
+		var firstName = form.first_name.value;
+		var lastName = form.last_name.value;
+		var flightObj={first_name: firstName, last_name: lastName};
+		flightData.push(flightObj);
+		// var flightDataObj=JSON.stringify(flightData);
+
+		// localStorage.flightRecords=JSON.stringify(flightData);
+
+		console.log("wprowadzono: "+firstName+lastName);
+		console.log("flightData: "+flightData);
+		console.log("flightObj: "+flightObj);
+		// console.log(flightDataObj);
+
+	};
+
+
+	// sample jsonobj
+	var myjsonObjExample='[{"first_name":"wlodo1","last_name":"sido1"},{"first_name":"wlodo2","last_name":"sido2"}]';
+	console.log(myjsonObjExample);
+	var jsonparsed = JSON.parse(myjsonObjExample);
+
+	// <!-- flightData is Array Obj -->
+	var flightData=[];
+	var flightDataTest=[{"first_name":"wlodo1","last_name":"sido1"},{"first_name":"wlodo2","last_name":"sido2"}];
+	// var flightDataObj={};
+
+	// datatables init
+	$(document).ready(function () {
+		$('#table_id').DataTable( {
+		data: flightDataTest,
+		columns: [
+		{ data: "first_name" },
+		{ data: "last_name" },
+		]
+		});
+	} );
+
+</script>
+
+</head>
+
+<body onlaod="init()">
+<!-- datatable -->
+<div>
+	<table id="table_id" class="display" style="width:100%">
+	</table>
+</div>
+<!-- forms -->
+<div class="container">
+<form NAME="myform" ACTION="" METHOD="GET" id="frm1" class="col s12">
+  <div class="row">
+	<div class="input-field col s6">
+		<input id="first_name" type="text" class="validate">
+		<label for="first_name">First Name</label>
+	</div>
+	<div class="input-field col s6">
+		<input id="last_name" type="text" class="validate">
+		<label for="last_name">Last Name</label>
+	</div>
+  </div>
+
+	<div class="row">
+		<div class="input-field col s6">
+		<input id="number_field" type="text" class="validate">
+	    <label for="number_field">Number</label>
+		</div>
+	</div>
+
+  <div class="row">
+	<div class="col s12">
+      Sign document with your email:
+	<div class="input-field inline">
+		<input id="email_inline" type="email" class="validate">
+		<label for="email_inline">Email</label>
+		<span class="helper-text" data-error="error" data-success="ok!">Enter your email.</span>
+	</div>
+	</div>
+  </div>
+
+<input class="btn waves-effect waves-light" type="button" value="Submit" name="action" onClick="submitResults(this.form)">
+
+</form>
+</div>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+</script>
+
+</body>
+</html>
